@@ -1,39 +1,31 @@
-import React from 'react'
-import Navbar from './navbar'
-import '../style.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import React from "react";
+import Navbar from "./navbar";
+import "../style.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
-import SliderComponent from './slider-component';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import SliderComponent from "./slider-component";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import SwiperComponent from "./swiper-component";
 
-function Header() {
- 
+function Header(props) {
   return (
-    <div id='header'>
-        <Navbar/>
-       <div id="swiper-wrapper">
-       <Swiper
-     modules={[Navigation, Pagination, Scrollbar, A11y]}
-     spaceBetween={50}
-     slidesPerView={1}
-     navigation
-     pagination={{ clickable: true }}
-     scrollbar={{ draggable: true }}
-     onSwiper={(swiper) => console.log(swiper)}
-     onSlideChange={() => console.log('slide change')}
-    >
-         <SwiperSlide> <SliderComponent/></SwiperSlide>
-         <SwiperSlide> <SliderComponent/></SwiperSlide>
-         <SwiperSlide> <SliderComponent/></SwiperSlide>
-        
-        </Swiper>
-       </div>
+    <div id="header">
+      {props.hasNavbar && <Navbar />}
+      <SwiperComponent
+      firstTitle ="travel blog"
+      firstContent='The principle of perception reflects a typical sign. Hence it follows naturally that bhatavada makes a sign. Common sense, of course, is ambiguous, According to the opinion of well-lnown philosophers, the pain decomposes structuralism into elements. Structuralism mentally takes into account the deductive method.'
+      secondTitle='Discover Hidden Gems'
+      secondContent='Exploring off-the-beaten-path destinations unveils the true essence of travel. Serene landscapes, untouched by the masses, offer a glimpse into the soul of a place. As you venture into these hidden gems, each step unravels a new chapter, painting memories that last a lifetime.'
+      thirdTitle='Immerse in Local Culture'
+      thirdContent='Dive deep into the heart of local culture and traditions. Engage with communities, savor authentic cuisine, and partake in age-old customs. Every interaction is a window to a world of diversity, enriching your journey with invaluable experiences and insights.'
+     
+      />
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
