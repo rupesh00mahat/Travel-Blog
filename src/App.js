@@ -12,24 +12,25 @@ import { FiYoutube } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { RiFacebookLine } from "react-icons/ri";
 import { PiTelegramLogoLight } from "react-icons/pi";
-
+import Img1 from "./assets/img-1.jpg";
+import Img2 from './assets/img-2.jpg';
 
 function App() {
   return (
     <div className="App">
       <Header hasNavbar={true} />
-      <BodyComponent imgAlign="left" />
+      <BodyComponent image={Img1} imgAlign="left" />
       <div id="section-two">
-        <SwiperComponent 
-        firstTitle ='Trolltunga'
-        firstContent={`Norway's Trolltunga, a stunning rock formation, offers daredevils breathtaking views over Lake Ringedalsvatnet. A challenging hike leads to this iconic spot, where nature's power and beauty converge, leaving adventurers in awe.`}
-        secondTitle ='Kjeragbolten'
-        secondContent={`Suspended between cliffs in Norway's Lysefjord, Kjeragbolten captivates with its audacious presence. Journey through Nordic wilderness to stand atop this giant boulder, where awe-inspiring views humble and inspire.`}
-        thirdTitle ="Preikestolen"
-        thirdContent={`Preikestolen, rising 604 meters above Lysefjord, offers panoramic vistas of Norway's natural beauty. A trek through forests leads to this flat-topped cliff, where nature's grandeur unfolds, leaving visitors spellbound and humbled.`}
+        <SwiperComponent
+          firstTitle="Trolltunga"
+          firstContent={`Norway's Trolltunga, a stunning rock formation, offers daredevils breathtaking views over Lake Ringedalsvatnet. A challenging hike leads to this iconic spot, where nature's power and beauty converge, leaving adventurers in awe.`}
+          secondTitle="Kjeragbolten"
+          secondContent={`Suspended between cliffs in Norway's Lysefjord, Kjeragbolten captivates with its audacious presence. Journey through Nordic wilderness to stand atop this giant boulder, where awe-inspiring views humble and inspire.`}
+          thirdTitle="Preikestolen"
+          thirdContent={`Preikestolen, rising 604 meters above Lysefjord, offers panoramic vistas of Norway's natural beauty. A trek through forests leads to this flat-topped cliff, where nature's grandeur unfolds, leaving visitors spellbound and humbled.`}
         />
       </div>
-      <BodyComponent imgAlign="right" />
+      <BodyComponent image={Img2} imgAlign="right" />
       <div id="footer">
         <div className="footer-wrapper">
           <div className="footer-nav">
@@ -51,12 +52,11 @@ function App() {
             </div>
           </div>
           <div id="footer-social-icons">
-          <FiYoutube />
-          <CiTwitter />
-          <FaInstagram />
-          <RiFacebookLine />
-          <PiTelegramLogoLight />
-
+            <FiYoutube />
+            <CiTwitter />
+            <FaInstagram />
+            <RiFacebookLine />
+            <PiTelegramLogoLight />
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import Img1 from "../assets/img-1.jpg";
 import "../style.css";
 
 function BodyComponent(props) {
   return (
     <div id={`body-component-${props.imgAlign}`} className={`body-component-${props.imgAlign}`}>
-      <img src={Img1} />
+      <img src={props.image} />
+      <div className={`image-overlay-${props.imgAlign}`}></div>
       <div id="body-component-content">
         <h1>the mountains</h1>
         <p>
