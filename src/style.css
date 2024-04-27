@@ -11,6 +11,9 @@ html, body{
     overflow-x: hidden;
  
 }
+.hamburger-menu{
+    display: none;
+}
 /* Header */
 #header{
     background-image: url('./assets//background-1.jpg');
@@ -303,12 +306,51 @@ margin-bottom: 20px;
    .image-overlay-left, .image-overlay-right{
     display: none;
    }
+ 
   
 }
 @media screen and (max-width: 767px) {
+    nav ul, nav > div, nav{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: black;
+        justify-content: center;
+        list-style-type: none;
+        gap: 30px;
+        color: white;
+        font-size: 20px;
+        align-items: center;
+        opacity: 0.6;
+    }
+    .hamburger-menu{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .hamburger-menu svg{
+        height: 40px;
+        width: 40px;
+    }
+
+    
+    nav{
+        left: 0;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        display: none;
+        padding: 15px 0px;
+    }
+   
     #swiper-wrapper{
         left: 30px;
         width: 85%;
+        margin-top: 100px;
     }
     #body-component-left, #body-component-right{
         display: flex;
